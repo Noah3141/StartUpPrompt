@@ -2,12 +2,12 @@
 
 
 # Compile Java files
-javac File.java StartUpPrompt.java -d ./build
+javac ./src/*.java -d ./build
 
 
 if [ $? -eq 0 ]; then
-
-	java ./build/StartUpPrompt
+	echo "Compiled. Running StartUpPrompt..."
+	java -cp ./build StartUpPrompt
 
 else 
 	echo "Failed to compile!"
